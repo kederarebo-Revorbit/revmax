@@ -1,0 +1,6 @@
+{
+  "name": "RevMax Digital Hospitality",
+  "description": "Hospitality consulting, OTA management, revenue optimization, and digital growth partner for hotels, apartments, and lodges.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

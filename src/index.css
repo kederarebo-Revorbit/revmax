@@ -1,0 +1,116 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --brand-blue: #0052FF;
+    --brand-blue-hover: #0045d8;
+    --brand-cyan: #00D4FF;
+    --brand-cyan-dark: #00a8cc;
+    --brand-dark: #0F172A;
+    --bg-white: #FFFFFF;
+    --bg-light: #F8FAFC;
+    --border-light: #E2E8F0;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #ffffff;
+    color: #1e293b;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+  }
+}
+
+/* Custom logo color gradient utilities */
+.text-revmax-gradient {
+  background: linear-gradient(135deg, #0052FF 0%, #0099FF 50%, #00D4FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-revmax-cyan {
+  color: #00D4FF;
+}
+
+.bg-revmax-gradient {
+  background: linear-gradient(135deg, #0052FF 0%, #0070F3 50%, #00D4FF 100%);
+}
+
+.bg-revmax-subtle {
+  background: linear-gradient(135deg, rgba(0, 82, 255, 0.05) 0%, rgba(0, 212, 255, 0.08) 100%);
+}
+
+.border-revmax-glow {
+  border-color: rgba(0, 82, 255, 0.2);
+}
+
+.border-revmax-glow:hover {
+  border-color: rgba(0, 212, 255, 0.5);
+}
+
+.shadow-revmax-sm {
+  box-shadow: 0 4px 16px -2px rgba(0, 82, 255, 0.08);
+}
+
+.shadow-revmax-md {
+  box-shadow: 0 10px 30px -4px rgba(0, 82, 255, 0.12);
+}
+
+.shadow-revmax-lg {
+  box-shadow: 0 20px 40px -8px rgba(0, 82, 255, 0.16);
+}
+
+/* Custom interactive cursor ring & dot */
+.custom-cursor-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  background-color: #0052FF;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease-out, background-color 0.2s ease;
+}
+
+.custom-cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 36px;
+  height: 36px;
+  border: 2px solid rgba(0, 212, 255, 0.6);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+  transition: width 0.25s ease, height 0.25s ease, border-color 0.2s ease, transform 0.12s ease-out;
+}
+
+.custom-cursor-ring.cursor-hover {
+  width: 54px;
+  height: 54px;
+  background: rgba(0, 82, 255, 0.08);
+  border-color: #0052FF;
+}
+
+/* Custom sleek scrollbar for light background */
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #f8fafc;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #0052FF;
+}
